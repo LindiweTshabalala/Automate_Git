@@ -13,7 +13,7 @@ def git_add():
 
 
 def git_commit():
-    print("\nEnter commit message: ")
+    print("\nQuote your commit message: ")
     os.system("git commit -m " + input())
 
 
@@ -32,6 +32,7 @@ def git_push():
         #your commit changes will be in your working directory, 
         # whereas the LAST commit will be removed from your current branch.
         os.system("git reset HEAD~1 --soft ") 
+        
 
 
 if __name__ == '__main__':
