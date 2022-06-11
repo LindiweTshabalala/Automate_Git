@@ -13,20 +13,19 @@ def git_add():
 
 
 def git_commit():
-    os.system("git commit -m " + input(" "))
+    print("\nEnter commit message: ")
+    os.system("git commit -m " + input())
 
 
 def git_status():
-    print("Getting git status...")
+    print("\nGetting git status...")
     os.system("git status")
 
 def git_push():
-    third_prompt = input("Do you wish to push the the committed changes? y/n ")
-    y = "yes"
-    n = "no"
-    if third_prompt == y.lower():
+    third_prompt = input("\nDo you wish to push the the committed changes? y/n ")
+    if third_prompt.lower() == "y":
         os.system("git push")
-    elif third_prompt == n.lower():
+    elif third_prompt.lower() == "n":
         print("Arborted")
 
         #you have not pushed the commit publicly yet, 
