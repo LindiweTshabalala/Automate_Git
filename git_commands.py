@@ -24,7 +24,8 @@ def git_add():
 
 def git_commit():
     print("\nQuote your commit message: ")
-    os.system("git commit -m " + input())
+    # message = input()
+    os.system("git commit -m \"{}\"".format(input()))
 
 
 def git_status():
@@ -41,7 +42,7 @@ def git_push():
         #you have not pushed the commit publicly yet, 
         #your commit changes will be in your working directory, 
         # whereas the LAST commit will be removed from your current branch.
-        os.system("git reset HEAD~1 --soft ") 
+        os.system("git reset HEAD~1") 
         
 
 
